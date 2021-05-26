@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/data',
     '<rootDir>/libs/core',
     '<rootDir>/libs/features',
+    '<rootDir>/apps/lets-grid',
   ],
 };

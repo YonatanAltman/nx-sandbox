@@ -1,0 +1,7 @@
+@import "variable";
+:host{
+  height: 50vh;
+  width: 50vw;
+  background: red;
+  outline: $outline-red;
+}

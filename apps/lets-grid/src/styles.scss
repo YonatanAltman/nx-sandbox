@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  background: black;
+
+  div {
+    font-family: Bubblegum Sans, serif;
+  }
+}
+
+.page-wrapper {
+  display: grid;
+  height: 100vh;
+}
+.center{
+  display: grid;
+  place-content: center;
+}
+

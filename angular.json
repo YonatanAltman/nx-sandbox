@@ -51,9 +51,7 @@
               "apps/nx-sandbox/src/favicon.ico",
               "apps/nx-sandbox/src/assets"
             ],
-            "styles": [
-              "apps/nx-sandbox/src/styles.scss"
-            ],
+            "styles": ["apps/nx-sandbox/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -115,9 +113,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/nx-sandbox"
-          ],
+          "outputs": ["coverage/apps/nx-sandbox"],
           "options": {
             "jestConfig": "apps/nx-sandbox/jest.config.js",
             "passWithNoTests": true
@@ -146,9 +142,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/nx-sandbox-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/nx-sandbox-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -160,16 +154,12 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": [
-              "apps/api/src/assets"
-            ]
+            "assets": ["apps/api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -194,16 +184,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/api/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/api/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/api"
-          ],
+          "outputs": ["coverage/apps/api"],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
@@ -219,16 +205,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/data/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/data/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/data"
-          ],
+          "outputs": ["coverage/libs/data"],
           "options": {
             "jestConfig": "libs/data/jest.config.js",
             "passWithNoTests": true
@@ -244,16 +226,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/core/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/core/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/core"
-          ],
+          "outputs": ["coverage/libs/core"],
           "options": {
             "jestConfig": "libs/core/jest.config.js",
             "passWithNoTests": true
@@ -274,19 +252,134 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
+            "lintFilePatterns": ["libs/features/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/features"],
+          "options": {
+            "jestConfig": "libs/features/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lets-grid": {
+      "projectType": "application",
+      "root": "apps/lets-grid",
+      "sourceRoot": "apps/lets-grid/src",
+      "prefix": "nx-sandbox",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/lets-grid",
+            "index": "apps/lets-grid/src/index.html",
+            "main": "apps/lets-grid/src/main.ts",
+            "polyfills": "apps/lets-grid/src/polyfills.ts",
+            "tsConfig": "apps/lets-grid/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/lets-grid/src/favicon.ico",
+              "apps/lets-grid/src/assets"
+            ],
+            "styles": ["apps/lets-grid/src/styles.scss"],
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/lets-grid/src/assets/styles"
+              ]
+            }
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/lets-grid/src/environments/environment.ts",
+                  "with": "apps/lets-grid/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "lets-grid:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "lets-grid:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "lets-grid:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
             "lintFilePatterns": [
-              "libs/features/**/*.ts"
+              "apps/lets-grid/src/**/*.ts",
+              "apps/lets-grid/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/features"
-          ],
+          "outputs": ["coverage/apps/lets-grid"],
           "options": {
-            "jestConfig": "libs/features/jest.config.js",
+            "jestConfig": "apps/lets-grid/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "lets-grid-e2e": {
+      "root": "apps/lets-grid-e2e",
+      "sourceRoot": "apps/lets-grid-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/lets-grid-e2e/cypress.json",
+            "tsConfig": "apps/lets-grid-e2e/tsconfig.e2e.json",
+            "devServerTarget": "lets-grid:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "lets-grid:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/lets-grid-e2e/**/*.{js,ts}"]
           }
         }
       }

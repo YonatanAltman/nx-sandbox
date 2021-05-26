@@ -1,0 +1,9 @@
+.page-wrapper{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+img{
+  height: 30vh;
+  width: auto;
+}

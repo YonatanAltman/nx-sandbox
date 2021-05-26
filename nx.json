@@ -17,6 +17,8 @@
     "api": { "tags": [] },
     "data": { "tags": [] },
     "core": { "tags": [] },
-    "features": { "tags": [] }
+    "features": { "tags": [] },
+    "lets-grid": { "tags": [] },
+    "lets-grid-e2e": { "tags": [], "implicitDependencies": ["lets-grid"] }
   }
 }
