@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nx-sandbox';
+  text = 'some text for display';
 }
