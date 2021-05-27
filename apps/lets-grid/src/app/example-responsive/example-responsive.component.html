@@ -1,1 +1,54 @@
-<p>example-responsive works!</p>
+<header>
+  <button (click)="showNav = !showNav" class="material-icons">
+    {{ showNav ? 'close' : 'menu' }}
+  </button>
+
+  <!--
+    The unusual handling of showNav ensures that the nav animations are only
+    triggered at the appropriate points.
+  -->
+  <a routerLink="/" (click)="showNav = showNav ? false : showNav">
+    <h1>{{ title }}</h1>
+  </a>
+</header>
+
+<nav
+  (click)="showNav = false"
+  [class.showNav]="showNav"
+  [class.hideNav]="showNav === false"
+>
+  <a routerLink="/">
+    Home
+  </a>
+
+  <a routerLink="/blocks">
+    Blocks
+  </a>
+
+  <a routerLink="/doc">
+    Document
+  </a>
+
+</nav>
+
+<main>
+
+
+
+</main>
+
+<footer>
+
+  <a target="_blank" href="http://e-square.io">
+    e-square.io
+  </a>
+
+  <a target="_blank" href="https://twitter.com/altman_yonatan">
+    Twitter
+  </a>
+
+  <a target="_blank" href="https://github.com/YonatanAltman">
+    Github
+  </a>
+
+</footer>

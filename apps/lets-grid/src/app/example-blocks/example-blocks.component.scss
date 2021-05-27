@@ -1,0 +1,18 @@
+$size: 150px;
+:host{
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 150px 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-gap: 10px;
+}
+.tile {
+  display: grid;
+  place-content: center;
+  height: $size;
+  width: $size;
+  font-size: 3em;
+  background: rgb(172,242,165);
+  background: linear-gradient(270deg, rgba(172,242,165,0.5900735294117647) 4%, rgba(24,255,0,0.6629026610644257) 100%);
+  border-radius: 10px;
+}

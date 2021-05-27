@@ -1,7 +1,33 @@
 @import "variable";
-:host{
-  height: 50vh;
-  width: 50vw;
-  background: red;
-  outline: $outline-red;
+
+:host {
+  padding: 10px;
+}
+
+.page-wrapper {
+  color: white;
+
+  > * {
+    background: rgba(245, 222, 179, 0.3);
+    padding: 10px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.body {
+
+}
+
+.footer {
+}
+
+.img {
+  img {
+    width: 100%;
+  }
 }

@@ -6,7 +6,7 @@ import { IComponentRout } from '../common/interface';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor() {
   }
@@ -16,10 +16,10 @@ export class HomeComponent implements OnInit {
     { link: 'doc', label: 'my documents' },
     { link: 'blocks', label: 'blocks' },
     { link: 'flex', label: 'grid can be flex?' },
-    { link: 'responsive', label: 'full mobile' }
+    { link: 'responsive', label: 'full mobile' },
+    { link: 'position', label: 'until the very end' },
+    { link: 'area', label: 'my area' }
   ];
 
-  ngOnInit(): void {
-  }
 
 }

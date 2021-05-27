@@ -9,9 +9,12 @@ import { ExampleDocumentComponent } from './example-document/example-document.co
 import { ExampleBlocksComponent } from './example-blocks/example-blocks.component';
 import { ExampleFlexComponent } from './example-flex/example-flex.component';
 import { ExampleResponsiveComponent } from './example-responsive/example-responsive.component';
+import { ExamplePositionComponent } from './example-position/example-position.component';
+import { ExampleAreasComponent } from './example-areas/example-areas.component';
 
 @NgModule({
-  declarations: [AppComponent, ExampleCenteringComponent, HomeComponent, ExampleDocumentComponent, ExampleBlocksComponent, ExampleFlexComponent, ExampleResponsiveComponent],
+  declarations: [AppComponent,
+    ExampleCenteringComponent, HomeComponent, ExampleDocumentComponent, ExampleBlocksComponent, ExampleFlexComponent, ExampleResponsiveComponent, ExamplePositionComponent, ExampleAreasComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
@@ -20,7 +23,9 @@ import { ExampleResponsiveComponent } from './example-responsive/example-respons
       { path: 'doc', component: ExampleDocumentComponent },
       { path: 'blocks', component: ExampleBlocksComponent },
       { path: 'flex', component: ExampleFlexComponent },
-      { path: 'responsive', component: ExampleResponsiveComponent }
+      { path: 'responsive', component: ExampleResponsiveComponent },
+      { path: 'position', component: ExamplePositionComponent },
+      { path: 'area', component: ExampleAreasComponent }
 
     ], { initialNavigation: 'enabled' })
   ],

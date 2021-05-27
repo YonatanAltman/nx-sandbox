@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './example-flex.component.html',
   styleUrls: ['./example-flex.component.scss']
 })
-export class ExampleFlexComponent implements OnInit {
+export class ExampleFlexComponent {
+  numbers = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    for (let i = 1; i < 13; i++) {
+      this.numbers.push(i);
+    }
   }
 
 }

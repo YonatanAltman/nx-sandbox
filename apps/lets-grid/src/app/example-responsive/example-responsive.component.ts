@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './example-responsive.component.html',
   styleUrls: ['./example-responsive.component.scss']
 })
-export class ExampleResponsiveComponent implements OnInit {
+export class ExampleResponsiveComponent {
+  static label = 'So Much Room for Activities!';
 
-  constructor() { }
+  title = 'Full-Viewport Application';
+  showNav = true;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
 }

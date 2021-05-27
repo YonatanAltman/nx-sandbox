@@ -7,6 +7,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "nx": "nx",
     "start": "ng serve",
+    "start:grid": "ng serve lets-grid -o --port 7070",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",

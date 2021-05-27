@@ -3,6 +3,10 @@ html, body {
   margin: 0;
   background: black;
 
+  header,
+  main,
+  footer,
+  nav,
   div {
     font-family: Bubblegum Sans, serif;
   }
@@ -12,7 +16,8 @@ html, body {
   display: grid;
   height: 100vh;
 }
-.center{
+
+.center {
   display: grid;
   place-content: center;
 }
