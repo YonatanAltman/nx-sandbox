@@ -25,6 +25,7 @@ take a quick tour into css grid magic.
 |`grid-columns: span <num>`|define how many columns the element should span |
 |`grid-template-areas: <structure>`|define the area structure of the grid |
 |`grid-template: <structure>`|define the structure of the grid |
+|` grid-template-columns:repeat( auto-fit,minmax($size,1fr));`|define the structure of the grid |
 
 
 
