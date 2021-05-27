@@ -1,13 +1,13 @@
+$size:10px;
 :host {
   display: grid;
-
   grid-gap: 0;
 
   grid-template:
                   " header            header "  auto
       [nav-start] " main              main   "  1fr   [nav-end]
                   " footer            footer "  auto
-    / [nav-start]   225px [nav-end]   1fr
+    / [nav-start]   1fr [nav-end]   3fr
 ;
 
   height: 100vh;
@@ -112,6 +112,20 @@ header, footer, nav {
 li {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.list{
+  display: grid;
+  grid-template-columns: repeat(2,400px) ;
+}
+.tile {
+  display: grid;
+  place-content: center;
+  height: $size;
+  width: $size;
+  font-size: 3em;
+  background: rgb(172,242,165);
+  background: linear-gradient(270deg, rgba(172,242,165,0.5900735294117647) 4%, rgba(24,255,0,0.6629026610644257) 100%);
+  border-radius: 10px;
 }
 
 .currentSelection {

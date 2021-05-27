@@ -11,12 +11,18 @@
     background: rgba(245, 222, 179, 0.3);
     padding: 10px;
   }
+  display: grid;
+
+  grid-template-columns: 300px 500px;
+  grid-gap: 10px;
 }
 
 .title {
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
+  grid-column: 1/-1;
+
 }
 
 .body {
@@ -24,9 +30,13 @@
 }
 
 .footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .img {
+  grid-column-start: 1;
+  grid-row-start: 2;
   img {
     width: 100%;
   }

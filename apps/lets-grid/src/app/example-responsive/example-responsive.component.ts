@@ -11,7 +11,13 @@ export class ExampleResponsiveComponent {
   title = 'Full-Viewport Application';
   showNav = true;
 
+
+  numbers = [];
+
   constructor() {
+    for (let i = 1; i < 20; i++) {
+      this.numbers.push(i);
+    }
   }
 
 }

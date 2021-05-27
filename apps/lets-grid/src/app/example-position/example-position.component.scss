@@ -3,6 +3,12 @@
   color: #ffffff;
   font-size: 30px;
   display: grid;
+  place-content: center;
+  height: 60vh;
+  grid-template-columns:  repeat(3, 300px);
+
+  column-gap: 30px;
+  row-gap: 60px;
 }
 
 .tile {
@@ -18,4 +24,6 @@
 
 .tile[title="3"] {
   background: #114ed2;
+  grid-column-start: 1;
+  grid-column: span 3;
 }

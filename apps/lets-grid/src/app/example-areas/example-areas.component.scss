@@ -3,5 +3,32 @@
 }
 
 .page-wrapper {
+  display: grid;
+  grid-gap: 10px;
+
+  grid-template:
+    "header header " 100px
+    "main  area51" 1fr
+    "area52 area52" auto
+    "footer footer" auto
+/     3fr 3fr;
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    display: grid;
+    place-content: center;
+    grid-area: main;
+  }
+
+  .area51 {
+    grid-area: area51;
+  }
+
+  .area52 {
+    grid-area: area52;
+  }
 
 }
